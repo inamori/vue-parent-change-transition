@@ -26,7 +26,7 @@
     "url": "https://github.com/inamori/vue-parent-change-transition/issues"
   },
   "homepage": "https://github.com/inamori/vue-parent-change-transition#readme",
-  "private": true,
+  "private": false,
   "dependencies": {
     "gsap": "^2.0.1",
     "hoek": "~>4.2.1",
