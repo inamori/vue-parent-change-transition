@@ -11,10 +11,10 @@
   },
   "dependencies": {
     "gsap": "^2.0.1",
+    "hoek": "~>4.2.1",
     "vue": "^2.5.11",
-    "vue-parent-change-transition": "github:inamori/vue-parent-change-transition#master",
-    "vuex": "^3.0.1",
-    "hoek": "~>4.2.1"
+    "vue-parent-change-transition": "0.0.1",
+    "vuex": "^3.0.1"
   },
   "browserslist": [
     "> 1%",

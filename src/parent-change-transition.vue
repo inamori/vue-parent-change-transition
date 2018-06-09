@@ -37,12 +37,13 @@
       },
       move (previous, current) {
         clearInterval(this.intervalIndex)
-        TweenMax.fromTo(this.$el, this.duration * 0.001, {
-          transform: `translate(${previous.x - current.x}px, ${previous.y - current.y}px)`
-        }, {
-          transform: 'translate(0, 0)',
-          onComplete: this.startPositionInspection.bind(this)
-        })
+        this.$el.animate([
+          { transform: `translate(${previous.x - current.x}px, ${previous.y - current.y}px)` },
+          { transform: 'translate(0, 0)' }
+        ], {
+          duration: this.duration,
+          easing: 'cubic-bezier(0,0,0.32,1)',
+        }).addEventListener('finish', () => this.startPositionInspection())
       },
       beforeLeave (el) {
         previousPosition[this.childId] = el.getBoundingClientRect()
